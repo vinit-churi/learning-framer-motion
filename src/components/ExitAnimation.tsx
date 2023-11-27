@@ -11,9 +11,10 @@ const ExitAnimation = () => {
       <AnimatePresence>
         {isVisible && (
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 0.3 }}
             className="h-40 w-40 rounded-lg bg-yellow-200 flex items-center justify-center"
           >
             Visible
